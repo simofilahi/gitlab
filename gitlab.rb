@@ -367,7 +367,7 @@ external_url 'https://gitlab.example.com'
 # high_availability['mountpoint'] = ["/var/opt/gitlab/git-data", "/var/opt/gitlab/gitlab-rails/shared"]
 
 ### GitLab Shell settings for GitLab
-# gitlab_rails['gitlab_shell_ssh_port'] = 22
+gitlab_rails['gitlab_shell_ssh_port'] = 222
 # gitlab_rails['gitlab_shell_git_timeout'] = 800
 
 ### Extra customization
