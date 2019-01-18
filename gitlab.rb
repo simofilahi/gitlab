@@ -11,6 +11,9 @@
 ##! For more details on configuring external_url see:
 ##! https://docs.gitlab.com/omnibus/settings/configuration.html#configuring-the-external-url-for-gitlab
 external_url 'https://gitlab.example.com'
+nginx['enable'] = true
+nginx['redirect_http_to_https'] = true
+nginx['redirect_http_to_https_port'] = 80
 
 ## Roles for multi-instance GitLab
 ##! The default is to have no roles enabled, which results in GitLab running as an all-in-one instance.
@@ -367,7 +370,7 @@ external_url 'https://gitlab.example.com'
 # high_availability['mountpoint'] = ["/var/opt/gitlab/git-data", "/var/opt/gitlab/gitlab-rails/shared"]
 
 ### GitLab Shell settings for GitLab
-gitlab_rails['gitlab_shell_ssh_port'] = 222
+# gitlab_rails['gitlab_shell_ssh_port'] = 22
 # gitlab_rails['gitlab_shell_git_timeout'] = 800
 
 ### Extra customization
@@ -949,8 +952,8 @@ gitlab_rails['gitlab_shell_ssh_port'] = 222
 
 # nginx['enable'] = true
 # nginx['client_max_body_size'] = '250m'
-nginx['redirect_http_to_https'] = true
-nginx['redirect_http_to_https_port'] = 80
+# nginx['redirect_http_to_https'] = false
+# nginx['redirect_http_to_https_port'] = 80
 
 ##! Most root CA's are included by default
 # nginx['ssl_client_certificate'] = "/etc/gitlab/ssl/ca.crt"
@@ -1534,7 +1537,7 @@ nginx['redirect_http_to_https_port'] = 80
 ################################################################################
 # Let's Encrypt integration
 ################################################################################
-# letsencrypt['enable'] = true
+# letsencrypt['enable'] = nil
 # letsencrypt['contact_emails'] = [] # This should be an array of email addresses to add as contacts
 # letsencrypt['group'] = 'root'
 # letsencrypt['key_size'] = 2048
