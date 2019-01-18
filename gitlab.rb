@@ -10,9 +10,11 @@
 ##! URL on which GitLab will be reachable.
 ##! For more details on configuring external_url see:
 ##! https://docs.gitlab.com/omnibus/settings/configuration.html#configuring-the-external-url-for-gitlab
-external_url 'https://gitlab.example.com'
 nginx['enable'] = true
 nginx['redirect_http_to_https'] = true
+nginx['redirect_http_to_https_port'] = 80
+nginx['ssl_certificate'] = "/etc/gitlab/ssl/gitlab.crt"
+nginx['ssl_certificate_key'] = "/etc/gitlab/ssl/gitlab.key"
 gitlab_rails['gitlab_shell_ssh_port'] = 222
 #nginx['redirect_http_to_https_port'] = 80
 
