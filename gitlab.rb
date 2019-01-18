@@ -13,7 +13,7 @@
 external_url 'https://gitlab.example.com'
 nginx['enable'] = true
 nginx['redirect_http_to_https'] = true
-nginx['redirect_http_to_https_port'] = 80
+#nginx['redirect_http_to_https_port'] = 80
 
 ## Roles for multi-instance GitLab
 ##! The default is to have no roles enabled, which results in GitLab running as an all-in-one instance.
@@ -1537,7 +1537,7 @@ nginx['redirect_http_to_https_port'] = 80
 ################################################################################
 # Let's Encrypt integration
 ################################################################################
-# letsencrypt['enable'] = nil
+# letsencrypt['enable'] = true
 # letsencrypt['contact_emails'] = [] # This should be an array of email addresses to add as contacts
 # letsencrypt['group'] = 'root'
 # letsencrypt['key_size'] = 2048
