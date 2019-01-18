@@ -13,6 +13,7 @@
 external_url 'https://gitlab.example.com'
 nginx['enable'] = true
 nginx['redirect_http_to_https'] = true
+gitlab_rails['gitlab_shell_ssh_port'] = 222
 #nginx['redirect_http_to_https_port'] = 80
 
 ## Roles for multi-instance GitLab
