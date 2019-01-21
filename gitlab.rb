@@ -10,7 +10,7 @@
 ##! URL on which GitLab will be reachable.
 ##! For more details on configuring external_url see:
 ##! https://docs.gitlab.com/omnibus/settings/configuration.html#configuring-the-external-url-for-gitlab
-external_url 'https://192.168.99.102'
+external_url 'https://192.168.99.100'
 nginx['enable'] = true
 nginx['redirect_http_to_https'] = true
 nginx['redirect_http_to_https_port'] = 80
